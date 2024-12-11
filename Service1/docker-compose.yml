@@ -1,0 +1,7 @@
+﻿version: '3.8'
+services:
+  service1:
+    build: .
+    image: service1:0.1
+    ports:
+      - "5001:80"

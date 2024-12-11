@@ -1,11 +1,14 @@
 version: '3.8'
 services:
   service1:
-    build: .
+    image: jerryonimo/lab5:latest
     ports:
       - "5001:80"
     deploy:
-      replicas: 2
-      update-config:
-        parallelism: 2
-        delay: 10s
+      replicas: 1
+    networks:
+     - my_network
+
+networks:
+  my_network:
+    external: true    
