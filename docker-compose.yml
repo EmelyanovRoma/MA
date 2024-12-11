@@ -1,0 +1,66 @@
+# version: '3.4'
+
+# services:
+#   service1:
+#     build:
+#       context: .
+#       dockerfile: Service1/Dockerfile
+#     container_name: service1
+#     ports:
+#       - "8001:80"
+
+#   service2:
+#     build:
+#       context: .
+#       dockerfile: Service2/Dockerfile
+#     container_name: service2
+#     ports:
+#       - "8002:80"
+
+#   nginx:
+#     build:
+#       context: ./nginx
+#       dockerfile: Dockerfile
+#     container_name: nginx
+#     ports:
+#       - "80:80"
+
+
+version: "3.8"
+
+services:
+  service1:
+    build:
+      context: ./Service1
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5000"
+    restart: always
+    networks:
+      - app-network
+
+  service2:
+    build:
+      context: ./Service2
+      dockerfile: Dockerfile
+    ports:
+      - "5002:5000"
+    restart: always
+    networks:
+      - app-network
+
+  nginx:
+    build:
+      context: ./Nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - service1
+      - service2
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

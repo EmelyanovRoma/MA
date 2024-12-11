@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service1", "Service1\Service1.csproj", "{669C3227-50A7-4B65-84F1-41EA7A261E0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx", "nginx", "{C7834B5E-F7D1-484F-96E1-D83214E11E59}"
+	ProjectSection(SolutionItems) = preProject
+		nginx\docker-compose.yml = nginx\docker-compose.yml
+		nginx\Dockerfile = nginx\Dockerfile
+		nginx\nginx.conf = nginx\nginx.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{5DF5020D-10EF-4B77-BE2A-92BB40C6DADF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{669C3227-50A7-4B65-84F1-41EA7A261E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{669C3227-50A7-4B65-84F1-41EA7A261E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{669C3227-50A7-4B65-84F1-41EA7A261E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{669C3227-50A7-4B65-84F1-41EA7A261E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F35DCEC9-9DE9-43A2-A69A-7C169EE8965A}
+	EndGlobalSection
+EndGlobal

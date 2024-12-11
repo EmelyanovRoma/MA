@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  service2:
+    build: .
+    ports:
+      - "5002:80"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    external: true
